@@ -1,1 +1,279 @@
 
+/*universal CSS reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*general website styling*/
+body {
+    background-color: #F6F2EC;
+    color: #34302D;
+    font-family: "Lato", sans-serif;
+}
+
+/*heading fonts*/
+h1, h2, h3 {
+    font-family: "Cormorant Garamond", serif;
+}
+
+/*header for both html pages*/
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #34302D;
+    color: #FFFFFF;
+}
+
+.logo {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 36px;
+}
+
+/*navigation links*/
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* hero section */
+.hero-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:10px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.hero-banner{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    background-color:#C9B5A3;
+    padding:20px;
+    min-height:350px;
+}
+
+.hero-sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:#A59B90;
+    padding:30px;  
+    color:#FFFFFF; 
+}
+
+.hero-sidebar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px;
+}
+.hero-sidebar a {
+    color: #FFFFFF;
+    text-decoration: none; 
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+
+/*hover effect*/
+.hero-sidebar a:hover {
+    text-decoration: underline;
+}
+
+.btn-card{
+    display: inline-block;
+    background-color: #34302D;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-card:hover {
+    background-color: #777767;
+}
+
+.card-gallery{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+    background-color: #E8D6CC;
+}
+
+.card:nth-child(2){
+    background-color: #C8CFBC;
+}
+.card:nth-child(3){
+    background-color: #C9B5A3;
+}
+
+.cards{
+    width:100%;
+    height:auto;
+}
+
+.card h3{
+    margin-bottom: -5px;
+    font-size:20px;
+}
+.card p{
+    font-size: 16px;
+}
+
+.card .btn-card{
+    margin-top: auto;
+}
+
+/* footer for both html pages */
+.site-footer{
+    background-color:#34302D;
+    color:#FFFFFF;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; 
+    
+}
+.site-footer a{
+    padding: 20px;
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ------------------------detailed html---------------------------- */ 
+
+
+.detail-layout{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px;
+}
+/*detail hero*/
+.detail-hero {
+    background-color: #C9B5A3;
+    padding: 20px;
+}
+
+.detail-hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.detail-hero h2 {
+    font-size: 30px;
+}
+
+.detail-hero p {
+    font-size: 16px;
+}
+
+/*main article and sidebar*/
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/*main article*/
+.context-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #E8D6CC;
+    padding: 30px;
+}
+
+/*project image*/
+.product {
+    max-width: 100%;
+    height: 500px;
+}
+
+/*article headings*/
+.context-body h2 {
+    font-size: 32px;
+}
+
+/*article paragraphs*/
+.context-body p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/*project details sidebar*/
+.context-sidebar {
+    background-color: #C8CFBC;
+    padding: 20px;
+}
+
+.context-sidebar h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/*sidebar list*/
+.context-sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 20px;
+}
+
+.context-sidebar li {
+    font-size: 16px;
+}
+
+
+/*desktop layout*/
+@media (min-width: 768px) {
+
+    /*homepage hero*/
+    .hero-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+    /* card-gallery layout */
+    .card-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    /*detail page content*/
+    .content-grid {
+        grid-template-columns: 3fr 1fr;
+    }
+
+}
